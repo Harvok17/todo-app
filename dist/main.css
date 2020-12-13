@@ -114,6 +114,7 @@ body {
   font-size: 1.3rem;
   cursor: pointer;
   color: var(--blue);
+  outline: none;
 }
 
 .project-details-wrapper {
@@ -256,6 +257,7 @@ border-radius: 10px;
   background: none;
   font-size: 1.3rem;
   cursor: pointer;
+  outline: none;
 }
 
 .todo-details {
@@ -307,6 +309,7 @@ border-radius: 10px;
   width: 60%;
   margin-top: 70px;
   margin-bottom: 20px;
+  outline: none;
 }
 
 
@@ -318,6 +321,7 @@ border-radius: 10px;
   text-align: center;
   border: 2px solid black;
   margin-bottom: 15px;
+  outline: none;
 }
 
 .todo-modal-title:hover,.todo-modal-description:hover {
