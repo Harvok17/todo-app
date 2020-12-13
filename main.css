@@ -1,0 +1,352 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+
+:root {
+  --blue: #60a1d6;
+  --grey: #e5e5e5;
+  --yellow: #fadf84;
+  --red: #d65436;
+  --green: #5ff57d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "DM Sans", sans-serif;
+}
+
+.container {
+  min-width: 900px;
+  width: 55%;
+  height: 750px;
+  -webkit-box-shadow: -1px 2px 38px -10px #000000;
+  box-shadow: -1px 2px 38px -6px #000000;
+  display: flex;
+  border-radius: 15px;
+}
+
+.project-menu {
+  flex: 0.3;
+  height: 100%;
+  background-color: var(--blue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 75px 30px 0 30px;
+  border-radius: 15px 0 0 15px;
+}
+
+.add-project-btn {
+  height: 50px;
+  width: 50px;
+  border: 0;
+  border-radius: 50%;
+  font-size: 2rem;
+  color: var(--blue);
+  cursor: pointer;
+  background-color: white;
+  -webkit-box-shadow: 0px 5px 22px -15px #000000; 
+  box-shadow: 0px 5px 22px -15px #000000;
+  transition: all 0.1s ease-in-out;
+}
+
+.add-project-btn:hover {
+  border: 2px solid white;
+  background-color: var(--blue);
+  color: white;
+}
+
+
+.project-list {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  height: 80%;
+  width: 100%;
+  list-style: none;
+  overflow: auto;
+}
+
+.project-item {
+  display: flex;
+  width: 100%;
+  min-height: 50px;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 20px;
+  
+}
+
+.project-item:hover {
+  background: white;
+  color: var(--blue);
+  -webkit-box-shadow: 0px 5px 22px -15px #000000; 
+  box-shadow: 0px 5px 22px -15px #000000;
+}
+
+.project-item.selected {
+  background: white;
+  color: var(--blue);
+  -webkit-box-shadow: 0px 5px 22px -15px #000000; 
+  box-shadow: 0px 5px 22px -15px #000000;
+}
+
+.project-item li {
+  pointer-events: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.project-delete-btn {
+  position: absolute;
+  right: 10px;
+  border: 0;
+  background: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: var(--blue);
+}
+
+.project-details-wrapper {
+  flex: 0.7;
+  position: relative;
+}
+
+.clock {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  pointer-events: none;
+}
+
+.project-details {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  z-index: 1;
+  position: absolute;
+  background-color: white;
+  border-radius: 0 15px 15px 0;
+}
+
+.hide {
+  display: none;
+}
+
+.project-title {
+  text-align: center;
+  border: 3px solid black;
+  -webkit-box-shadow: 0px 5px 22px -15px #000000; 
+  box-shadow: 0px 5px 22px -15px #000000;
+border-radius: 10px;
+  padding: 10px 20px;
+  font-family: inherit;
+  font-size: 2rem;
+  font-weight: 700;
+  width: 70%;
+  margin-bottom: 30px;
+}
+
+.project-title:hover {
+  border: 3px solid var(--blue);
+  -webkit-box-shadow: 0px 5px 22px -9px #000000; 
+  box-shadow: 0px 5px 22px -9px #000000;
+}
+
+.project-title:focus {
+  border: 3px solid var(--blue);
+  -webkit-box-shadow: 0px 5px 22px -9px #000000; 
+  box-shadow: 0px 5px 22px -9px #000000;
+  color: grey;
+}
+
+.add-todo-btn {
+  height: 50px;
+  width: 50px;
+  border: 0;
+  border-radius: 50%;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  background-color: var(--blue);
+  transition: all 0.1s ease-in-out;
+  margin-bottom: 30px;
+  -webkit-box-shadow: 0px 5px 22px -15px #000000; 
+  box-shadow: 0px 5px 22px -15px #000000;
+}
+
+.add-todo-btn:hover {
+  border: 2px solid var(--blue);
+  background-color: white;
+  color: var(--blue);
+}
+
+.todo-list {
+  list-style: none;
+  width: 70%;
+  height: 70%;
+  overflow-y: auto;
+}
+
+.todo-item {
+  display: flex;
+  height: 50px;
+  width: 90%;
+  position: relative;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.todo-info {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px 0 10px;
+  -webkit-box-shadow: 0px 5px 22px -9px #000000; 
+  box-shadow: 0px 5px 22px -9px #000000;
+  pointer-events: none;
+}
+
+.low-prio {
+  background-color: var(--green);
+}
+
+.mid-prio {
+  background-color: var(--yellow);
+}
+
+.high-prio {
+  background-color: var(--red);
+  color: white;
+}
+
+.completed {
+  background-color: var(--grey) !important;
+  color: black !important;
+}
+
+.todo-title,
+.todo-due-date {
+  flex: 1;
+  text-align: center;
+}
+
+.todo-delete-btn {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(150%, -50%);
+  border: 0;
+  background: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.todo-details {
+  padding-bottom: 20px;
+  width: 500px;
+  border: 2px solid black;
+  position: absolute;
+  z-index: 2;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.hide {
+  display: none;
+}
+
+.todo-overlay {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  z-index: 1;
+}
+
+.priority-wrapper {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-family: inherit;
+}
+
+.status-wrapper {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-family: inherit;
+}
+
+.todo-modal-title {
+  text-align: center;
+  border: 2px solid black;
+  padding: 5px 10px;
+  font-family: inherit;
+  font-size: 1.5rem;
+  font-weight: 500;
+  width: 60%;
+  margin-top: 70px;
+  margin-bottom: 20px;
+}
+
+
+.todo-modal-description {
+  resize: none;
+  width: 60%;
+  padding: 5px 10px;
+  font-family: inherit;
+  text-align: center;
+  border: 2px solid black;
+  margin-bottom: 15px;
+}
+
+.todo-modal-title:hover,.todo-modal-description:hover {
+  border: 2px solid var(--blue);
+}
+
+.todo-modal-title:focus,.todo-modal-description:focus {
+  border: 2px solid var(--blue);
+}
+
+.todo-modal-due-date {
+  border: 2px solid black;
+  font-family: inherit;
+  padding: 5px 10px;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.todo-modal-save-btn {
+  border: 2px solid var(--red);
+  padding: 10px 20px;
+  cursor: pointer;
+  font-family: inherit;
+  background: none;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 10px;
+  color: var(--red);
+}
+
+.todo-modal-save-btn:hover {
+  border: 2px solid var(--red);
+  color: white;
+  background-color: var(--red);
+}
