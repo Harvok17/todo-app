@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="assets/clipboard-pngrepo-com.png"
+  />
+    <title>Todo App</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="project-menu">
+        <button class="add-project-btn">+</button>
+
+        <ul class="project-list">
+          <!-- <div class="project-item">
+            <li class="project-name">New Project</li>
+            <button class="project-delete-btn" data-job="delete">&times;</button>
+          </div> -->
+        </ul>
+      </div>
+
+      <div class="project-details-wrapper">
+        <div class="clock" style="text-align:center;padding:5em 1em 0 1em;"> <h2><a style="text-decoration:none;" href="https://www.zeitverschiebung.net/en/country/ph"><span style="color:gray;">Current local time in</span><br />Philippines</a></h2> <iframe src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=en&size=large&timezone=Asia%2FManila" width="100%" height="140" frameborder="0" seamless></iframe> </div>
+
+        <div class="project-details hide">
+          <input type="text" class="project-title" value="New Project" maxlength="15"/>
+          <button class="add-todo-btn">+</button>
+          <ul class="todo-list">
+            <!-- <div class="todo-item">
+              <li class="todo-info">
+                <p class="todo-title">Todo Sample</p>
+                <p class="todo-due-date">Nov 23, 2020</p>
+              </li>
+              <button class="todo-delete-btn">&times;</button>
+            </div> -->
+          </ul>
+        </div>
+      </div>
+      
+    </div>
+
+    <form class="todo-details hide">
+      
+      <div class="priority-wrapper">
+        <label>Priority:</label>
+        <select class="priority" required>
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
+      </div>
+      
+      <div class="status-wrapper">
+        <label>Status:</label>
+        <select class="status" required>
+          <option value="completed">Completed</option>
+          <option value="not completed">Not Completed</option>
+        </select>
+      </div>
+      
+
+      <input type="text" class="todo-modal-title" value="Todo Title" maxlength="15"/>
+      <textarea
+        type="text"
+        class="todo-modal-description"
+        placeholder="Add Description"
+        maxlength="150"
+        rows="5"
+      ></textarea>
+
+      <label>Due date:</label>
+      <input type="date" class="todo-modal-due-date" required/>
+
+      <button class="todo-modal-save-btn">SAVE</button>
+    </form>
+
+    <div class="todo-overlay hide"></div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
