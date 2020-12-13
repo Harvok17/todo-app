@@ -44,8 +44,7 @@ todoList.addEventListener("click", (e) => {
 });
 
 todoSaveBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-  todo.updateTodoDetails();
+  todo.updateTodoDetails(e);
 });
 
 titleInput.addEventListener("keyup", function(e) {

@@ -102,11 +102,11 @@ export const todo = (() => {
     todoDueDate.value = selectedTodo.date;
   }
 
-  function updateTodoDetails() {
+  function updateTodoDetails(event) {
     if (!todoPrio.value || !todoStatus.value || !todoDueDate.value) {
       return;
     }
-
+    event.preventDefault();
     todoDetails.classList.add("hide");
     todoOverlay.classList.add("hide");
 
